@@ -1,0 +1,43 @@
+vim pod.yml
+----------------------
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod1
+spec:
+  containers:
+    - name: cont1
+      image: nginx    
+---------------------------------------
+vim abc.yaml
+
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: movies
+  labels:
+    app: paytm
+
+spec:
+  replicas: 3
+
+  selector:
+    matchLabels:
+      app: paytm
+
+  template:
+    metadata:
+      labels:
+        app: paytm
+
+    spec:
+      containers
+        - name: cont1
+          image: reddyaarush636/dth:latest
+
+resources:
+  requests:
+    cpu: "100m"
+    memory: "100Mi"
+
+----------------------------------------------------------
