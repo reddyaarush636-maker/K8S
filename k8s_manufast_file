@@ -31,7 +31,7 @@ spec:
         app: paytm
 
     spec:
-      containers
+      containers:
         - name: cont1
           image: reddyaarush636/dth:latest
 
